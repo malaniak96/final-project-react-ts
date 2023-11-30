@@ -1,0 +1,20 @@
+body.light-mode{
+    color: black;
+    background: rgb(227,10,207);
+    background: linear-gradient(90deg, rgba(227,10,207,0.9131302179074755) 6%, rgba(255,170,203,1) 100%, rgba(173,110,192,1) 100%);
+    margin: 0;
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: bold;
+
+}
+
+
+body {
+    color: lightgoldenrodyellow;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 27%, rgba(173,110,192,1) 100%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+

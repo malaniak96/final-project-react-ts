@@ -1,0 +1,89 @@
+.div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+
+.titleSearch{
+    font-size: 10px;
+    text-align: center;
+}
+
+.movieSearch{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 11vw;
+    height: 32vh;
+    margin-bottom: 20px;
+}
+
+
+.img{
+    width: 8vw;
+    height: 23vh;
+    border: 3px dashed white;
+}
+
+.img:hover{
+    width: 10vw;
+    height: 30vh;
+    border: 3px dashed white;
+    transition: 0.5s;
+}
+
+
+.input {
+    width: 28vw;
+    height: 4vh;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-right: 10px;
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 74%, rgba(173,110,192,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+input{
+    background: purple;
+}
+
+.button{
+    width: 10vw;
+    height: 6vh;
+    padding: 16px 33px 16px 33px;
+    border-radius: 36px;
+    background: linear-gradient(98.88deg, #a142f3 -2.99%, #000000 102.28%),
+    linear-gradient(0deg, #000000, #000000);
+    color: #FFFFFF;
+    text-transform:uppercase;
+    cursor: pointer;
+    font-size: 10px;
+}
+.button:hover {
+    color: black;
+    font-weight: bold;
+    background: white;
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.trendingMovies{
+    margin-top: 50px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}

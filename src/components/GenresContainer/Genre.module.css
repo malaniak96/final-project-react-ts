@@ -1,0 +1,126 @@
+.genresPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 28px;
+
+}
+
+.navlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    text-decoration: none;
+    width: 14vw;
+    height: 6vh;
+    padding: 16px 33px 16px 33px;
+    border-radius: 36px;
+    background: linear-gradient(98.88deg, #a142f3 -2.99%, #000000 102.28%),
+    linear-gradient(0deg, #000000, #000000);
+    font-size: 25px;
+}
+.navlink:hover{
+    font-weight: bold;
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    margin: 20px;
+    width: 14vw;
+    height: 6vh;
+    padding: 16px 33px 16px 33px;
+    border-radius: 36px;
+    background: #eeeeee;
+    font-size: 25px;
+
+}
+
+a {
+    text-decoration: none;
+    -webkit-text-fill-color: black;
+}
+
+.titleM{
+    font-size: 12px;
+    margin-top: 5px ;
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+
+.movieG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 15.7vw;
+    height: 43vh;
+    margin: 20px;
+    border: 5px solid;
+    border-image: linear-gradient(50deg, purple, #de8c39) 1;
+    text-transform: uppercase;
+    font-weight: bolder;
+    filter: drop-shadow(-10px -10px 10px pink);
+    text-align: center;
+}
+.img {
+    width: 10vw;
+    height: 30vh;
+    border: 3px dashed white;
+
+}
+
+.img:hover{
+    width: 12vw;
+    height: 38vh;
+    border: 3px dashed white;
+    transition: 0.5s;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn{
+    width: 10vw;
+    height: 3vh;
+    padding: 16px 33px 16px 33px;
+    border-radius: 25px;
+    background: linear-gradient(98.88deg, #a142f3 -2.99%, #000000 102.28%),
+    linear-gradient(0deg, #000000, #000000);
+    color: #FFFFFF;
+    text-transform:uppercase;
+    font-size: 20px;
+    margin: 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: black;
+    font-weight: bold;
+    background: white;
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    cursor: pointer;
+}
