@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {useSearchParams} from "react-router-dom";
-import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 
+import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 import {Movie} from "./Movie";
-import css from './Movies.module.css';
 import {movieActions} from "../../redux";
+import css from './Movies.module.css';
 
 
 const MoviesList = () => {

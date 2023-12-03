@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 
+import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 import {Genre} from "./Genre";
 import {genresActions} from "../../redux";
 import css from './Genre.module.css';

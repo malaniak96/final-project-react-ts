@@ -8,7 +8,7 @@
 
 }
 
-.navlink{
+.Navlink{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,11 +19,13 @@
     height: 6vh;
     padding: 16px 33px 16px 33px;
     border-radius: 36px;
+    border: 1px solid black;
     background: linear-gradient(98.88deg, #a142f3 -2.99%, #000000 102.28%),
     linear-gradient(0deg, #000000, #000000);
-    font-size: 25px;
+    font-size: 30px;
+    -webkit-text-fill-color: white;
 }
-.navlink:hover{
+.Navlink:hover{
     font-weight: bold;
     position: relative;
     bottom: 3px;
@@ -33,9 +35,10 @@
     height: 6vh;
     padding: 16px 33px 16px 33px;
     border-radius: 36px;
+    border: 1px solid black;
     background: #eeeeee;
-    font-size: 25px;
-
+    font-size: 30px;
+    -webkit-text-fill-color: black;
 }
 
 a {
@@ -44,7 +47,7 @@ a {
 }
 
 .titleM{
-    font-size: 12px;
+    font-size: 18px;
     margin-top: 5px ;
     margin-bottom: 0;
     font-weight: bolder;
@@ -93,7 +96,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 25px;
     color: white;
     font-weight: bold;
 }
@@ -107,7 +110,7 @@ a {
     linear-gradient(0deg, #000000, #000000);
     color: #FFFFFF;
     text-transform:uppercase;
-    font-size: 20px;
+    font-size: 25px;
     margin: 20px 20px 20px;
     display: flex;
     align-items: center;

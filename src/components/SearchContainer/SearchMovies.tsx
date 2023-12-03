@@ -3,24 +3,21 @@ import {useSearchParams} from "react-router-dom";
 
 import {SearchForm} from "./SearchForm";
 import {SearchMovie} from "./SearchMovie";
-import css from "../MoviesContainer/Movies.module.css";
 import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 import {movieActions} from "../../redux";
-
-
+import css from "../MoviesContainer/Movies.module.css";
 
 const SearchMovies = () => {
     const [params, setParams] = useSearchParams({page: '1', query: ''});
-    const page: string  = params.get('page') || '1';
+    const page: string = params.get('page') || '1';
     const query: string = params.get('query') || '';
-
 
     const {movies, total_pages} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         if (query) {
-            dispatch(movieActions.getMoviesFromSearch({page:page, query:query}))
+            dispatch(movieActions.getMoviesFromSearch({page: page, query: query}))
         } else {
             dispatch(movieActions.getTrendingMovies({page: page}))
         }
@@ -68,7 +65,7 @@ const SearchMovies = () => {
             </div>
             <div className={css.btns}>
                 <button className={css.btn} onClick={handlePagePrev} disabled={page === '1'}> &lt; </button>
-                    <span> Page: {page} out of {total_pages}</span>
+                <span> Page: {page} out of {total_pages}</span>
                 <button className={css.btn} onClick={handlePageNext} disabled={page === `${total_pages}`}> &gt; </button>
             </div>
         </div>

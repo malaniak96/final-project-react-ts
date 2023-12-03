@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
 import {urls} from "../../constants";
-import css from './MovieCredits.module.css';
 import {IActor} from "../../interfaces";
+import css from './MovieCredits.module.css';
 
 interface IProps {
     movieCredits: IActor
@@ -19,7 +19,9 @@ const MovieCredit: FC<IProps> = ({movieCredits}) => {
     return (
         <li className={css.ul}>
             <div className={css.name}>{original_name}</div>
-            <div><img className={css.image} src={imageActor} alt={original_name}/></div>
+            <div>
+                <img className={css.image} src={imageActor} alt={original_name}/>
+            </div>
             <div>
                 <h1 className={css.character}>Character:</h1>
                 <p>{character}</p>

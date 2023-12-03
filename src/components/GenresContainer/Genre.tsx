@@ -14,7 +14,7 @@ const Genre:FC<IProps> = ({genre}) => {
 
     return (
         <div>
-            <NavLink className={css.navlink} to={`${id}`}> <h3> {name}</h3></NavLink>
+            <NavLink className={css.Navlink} to={`${id}`}> <h3> {name}</h3></NavLink>
         </div>
     );
 };

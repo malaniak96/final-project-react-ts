@@ -1,7 +1,8 @@
-import {IGenre, IMovie, IMovieRes} from "../../interfaces";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {genresService} from "../../services";
 import {AxiosError} from "axios";
+
+import {genresService} from "../../services";
+import {IGenre, IMovie, IMovieRes} from "../../interfaces";
 
 interface IState {
     genres: IGenre[],

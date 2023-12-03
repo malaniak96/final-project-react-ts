@@ -8,7 +8,7 @@
 
 
 .titleSearch{
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -84,6 +84,6 @@ input{
 
 .trendingMovies{
     margin-top: 50px;
-    font-size: 17px;
+    font-size: 25px;
     margin-bottom: 20px;
 }

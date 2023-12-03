@@ -6,7 +6,6 @@ const imgUrl = 'https://image.tmdb.org/t/p/w500';
 const movie = '/discover/movie';
 const genre = '/genre/movie/list';
 
-
 const urls = {
     movie:{
         base: movie,
@@ -19,7 +18,8 @@ const urls = {
     genre: {
         base:genre,
         byId:(genreId:number):string=> `/genre/${genreId}/movies`
-    }
+    },
+     video: (id:number):string =>`/movie/${id}/videos`
 }
 
 

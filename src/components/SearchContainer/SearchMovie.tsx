@@ -11,7 +11,7 @@ interface IProps{
 
 const SearchMovie:FC<IProps> = ({movie}) => {
 
-    const {id,poster_path, original_title} = movie;
+    const {id, poster_path, original_title} = movie;
 
     const imageMovie = poster_path
         ? `${urls.movie.imgUrl}${poster_path}`

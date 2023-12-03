@@ -18,6 +18,7 @@ export interface IMovie {
     runtime: number;
 }
 
+
 export interface IMovieRes{
     page: number;
     total_pages: number;

@@ -1,8 +1,8 @@
 import {createAsyncThunk, createSlice, isFulfilled} from "@reduxjs/toolkit";
-
-import {IActor, IMovie, IMovieCredits, IMovieRes, ISearch} from "../../interfaces";
-import {movieService} from "../../services";
 import {AxiosError} from "axios";
+
+import {IActor, IMovie, IMovieCredits, IMovieRes, ISearch, IVideo, IVideos} from "../../interfaces";
+import {movieService} from "../../services";
 
 
 interface IState {
@@ -11,7 +11,9 @@ interface IState {
     page: number,
     results: IMovie[],
     total_pages: number,
-    cast: IActor[]
+    cast: IActor[],
+    isLightMode: boolean,
+    trailers: IVideo[],
 }
 
 const initialState: IState = {
@@ -27,7 +29,7 @@ const initialState: IState = {
         poster_path: '',
         release_date: '',
         title: '',
-        video: false,
+        video: null,
         vote_average: 0,
         vote_count: 0,
         runtime: 0,
@@ -36,7 +38,9 @@ const initialState: IState = {
     page: 1,
     results: [],
     total_pages: null,
-    cast: []
+    cast: [],
+    isLightMode: false,
+    trailers: null
 }
 
 const getAll = createAsyncThunk<IMovieRes, { page: string }>(
@@ -104,10 +108,28 @@ const getMoviesFromSearch = createAsyncThunk<ISearch, {page: string, query: stri
     }
 )
 
+
+const getMovieTrailer = createAsyncThunk<IVideos, {id: number}>(
+    'movieSlice/getMovieTrailer',
+    async ({id}, {rejectWithValue}) => {
+        try {
+            const {data} = await movieService.getMovieTrailer(id);
+            return data
+        } catch (e) {
+            const err = e as AxiosError
+            return rejectWithValue(err.response?.data)
+        }
+    }
+)
+
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setIsLightMode: ((state, action) => {
+            state.isLightMode = action.payload;
+        })
+    },
     extraReducers: builder =>
         builder
             .addCase(getById.fulfilled, (state, action) => {
@@ -123,6 +145,9 @@ const movieSlice = createSlice({
             .addCase(getMovieCreditById.fulfilled, (state, action) => {
                 const {cast} = action.payload;
                 state.cast = cast;
+            })
+            .addCase(getMovieTrailer.fulfilled, (state, action) => {
+                state.trailers = action.payload.results;
             })
             .addMatcher(isFulfilled(getAll, getTrendingMovies, getMoviesFromSearch), (state, action) => {
                 const {results, total_pages} = action.payload;
@@ -141,7 +166,8 @@ const movieActions = {
     getById,
     getMovieCreditById,
     getTrendingMovies,
-    getMoviesFromSearch
+    getMoviesFromSearch,
+    getMovieTrailer
 }
 
 export {

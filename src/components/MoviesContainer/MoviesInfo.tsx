@@ -8,22 +8,21 @@ import {genresActions, movieActions} from "../../redux";
 
 const MoviesInfo: FC = () => {
 
-    const {movie} = useAppSelector(state => state.movies);
+    const {movie, trailers} = useAppSelector(state => state.movies);
     const {genres} = useAppSelector(state => state.genres);
     const dispatch = useAppDispatch();
     const {id} = useParams();
 
     useEffect(() => {
         dispatch(movieActions.getById({id: +`${id}`}))
+        dispatch(genresActions.getAll())
+        dispatch(movieActions.getMovieTrailer({id: +`${id}`}))
     }, [id, dispatch]);
 
-    useEffect(() => {
-        dispatch(genresActions.getAll())
-    }, [dispatch]);
 
     return (
         <div>
-            {movie && <MovieInfo movie={movie} genres={genres} key={movie.id}/>}
+            {movie && trailers && <MovieInfo movie={movie} genres={genres} key={movie.id}/>}
         </div>
     );
 };

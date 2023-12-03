@@ -1,7 +1,7 @@
 body.light-mode{
     color: black;
-    background: rgb(227,10,207);
-    background: linear-gradient(90deg, rgba(227,10,207,0.9131302179074755) 6%, rgba(255,170,203,1) 100%, rgba(173,110,192,1) 100%);
+    background: rgb(155,75,176);
+    background: linear-gradient(90deg, rgba(155,75,176,0.7450629910167192) 32%, rgba(228,177,244,0.27727587617078087) 55%);
     margin: 0;
     font-family: 'Nanum Pen Script', cursive;
     font-weight: bold;
